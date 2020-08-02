@@ -1,0 +1,11 @@
+<div class="row justify-content-left " style="padding: unset;">
+  <span class="btn btn-dark" style="width: 10%;" routerLink="/" role="button">Back</span>     
+</div>
+<div *ngIf="showMessage" class="text-center">
+  <h2>{{message}}</h2>
+ </div>
+
+ <div *ngIf="showErrorMessage" class="text-center">
+  <h2>{{errorMessage}}</h2>
+ </div>
+ 

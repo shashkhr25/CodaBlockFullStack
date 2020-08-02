@@ -1,0 +1,30 @@
+<div class="text-center">
+  <h2>
+    Total Votes : {{totalVotes}}
+  </h2>
+</div>
+<br>
+<div class="div-table" >
+  <table class="table table-dark">
+  <thead> 
+    <tr>
+   <th  style="height: 40px; width: 100px;" >Index</th>
+   <th>Candidate Name</th>
+   <th>Expertise</th>
+   <th>Number of challanges</th>
+   <th>Vote</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let i of candidateList let m=index">  
+     <td>{{(m+1)}}</td>
+     <td>{{i.candidateName}}</td>
+     <td>{{i.expertise}}</td>
+     <td>{{i.numberOfChallanges}}</td>
+     <td>
+      <button class="btn btn-success" routerLink="vote/{{i.candidateId}}">Vote</button>
+    </td>     
+</tbody>  
+  
+</table> 
+</div>
